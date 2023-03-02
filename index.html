@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+<div class="container py-5">
+    <form action="">
+        <div class="my-3">
+            <label for="productName">Product Name</label>
+            <input type="text" id="productName" class="form-control">
+            <div id="Alert_name" class="alert alert-danger justify-content-center d-none text-center">
+                <p>Name Not Valid</p>
+            </div>  
+        </div>
+        <div class="my-3">
+            <label for="productPrice">Product Price</label>
+            <input type="number" id="productPrice" class="form-control">
+            <div id="Alert_price" class="alert alert-danger justify-content-center d-none text-center">
+                <p>Price Not Valid</p>
+            </div>  
+        </div>
+        <div class="my-3">
+            <label for="productCategary">Product Price</label>
+            <select name="" id="productCategary" class="form-select">
+                <option value="tv">tv</option>
+                <option value="mobile">mobile</option>
+                <option value="labtop">labtop</option>
+            </select>
+        </div>
+        <div class="my-3">
+            <label for="productDescription">Product Description</label>
+            <textarea name="" id="productDescription"  class="form-control"></textarea>
+            <div id="Alert_Description" class="alert alert-danger justify-content-center d-none text-center">
+                <p>This Field Is Required </p>
+            </div>  
+        </div>
+        <button type="button" id="addProduct" onclick="addproduct()" class="btn btn-outline-info">Add product</button>
+        <button type="button" id="addEdit"  style="display: none;" onclick="addedit(index)" class="btn btn-outline-info ">Add edit</button>
+        <button type="reset" id="clear" class="btn btn-danger">Clear form</button>
+    </form>
+</div>
+<div class="container">
+    <input type="text" id="search" onkeyup="search()" class="form-control w-50 mx-auto my-3" placeholder="search..........">
+    
+    <table class="table table-striped text-center table-bordered ">
+        <thead>
+            <tr>
+                <th>index</th>
+                <th>product name</th>
+                <th>product price</th>
+                <th>product category</th>
+                <th>product Description</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+        </thead>
+        <tbody id="tablebody">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <button class="btn btn-warning">update</button>
+                </td>
+                <td><button class="btn btn-danger">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+    <script src="crud.js"></script>
+</body>
+</html>
+
